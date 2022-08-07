@@ -9467,9 +9467,6 @@ textarea.form-control-lg {
 .icon-calc {
   width: 1em; }
 
-.icon-circle-arrow-top-left {
-  width: 1em; }
-
 .icon-flash {
   width: 0.66667em; }
 
@@ -9624,6 +9621,7 @@ ol {
         font-family: "PT Sans", sans-serif;
         font-size: 1rem; }
       .main-menu .dropdown-menu li {
+        width: max-content;
         list-style: inside; }
         .main-menu .dropdown-menu li a {
           padding: 6px;
@@ -9631,10 +9629,9 @@ ol {
       .main-menu .dropdown-menu > li a {
         font-weight: 700; }
     .main-menu__last-nesting {
-      margin-left: 30px; } }
-
-.main-menu__dropdown:hover .dropdown-menu {
-  display: block; }
+      margin-left: 30px; }
+  .main-menu__dropdown:hover .dropdown-menu {
+    display: block; } }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .main-menu {
@@ -9990,10 +9987,15 @@ ol {
     border-style: solid;
     border-color: #E1E1E;
     color: #fff; }
-    .main-carousel__title h3, .main-carousel__title .h3 {
+    .main-carousel__title a {
+      font-family: "Oswald", sans-serif;
+      font-weight: 500;
       font-size: 1.5625rem;
-      line-height: 120%;
+      color: #fff;
+      line-height: 100%;
       text-align: center; }
+      .main-carousel__title a:hover {
+        text-decoration: underline; }
   .main-carousel__control-btn {
     position: absolute;
     top: 149px;
@@ -10035,7 +10037,7 @@ ol {
 @media (max-width: 479.98px) {
   .main-carousel__title {
     padding: 11px 0; }
-    .main-carousel__title h3, .main-carousel__title .h3 {
+    .main-carousel__title a {
       font-size: 1.25rem; } }
 
 .breadcrumbs {
@@ -10079,6 +10081,8 @@ ol {
     font-size: 0.875rem;
     line-height: 150%;
     color: #134D81; }
+    .block__link:hover {
+      color: #E31E24; }
   .block__title {
     font-size: 1.5625rem;
     line-height: 130%;
@@ -10139,6 +10143,8 @@ ol {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden; }
+    .product-item__title:hover {
+      text-decoration: underline; }
   .product-item__description {
     height: 63px;
     font-size: 1rem;
@@ -10155,6 +10161,8 @@ ol {
     display: flex;
     align-items: center;
     gap: 15px; }
+    .product-item__link:hover {
+      text-decoration: underline; }
     .product-item__link .icon {
       flex-shrink: 0;
       width: 33px;
@@ -10198,6 +10206,11 @@ ol {
   .block__application .splide__track {
     overflow: visible; }
 
+.application-item__main {
+  color: #000; }
+  .application-item__main:hover {
+    color: #E31E24; }
+
 .application-item__image {
   width: 270px;
   height: 230px; }
@@ -10207,7 +10220,8 @@ ol {
   top: 178px;
   left: 15px;
   width: 37px;
-  height: 37px; }
+  height: 37px;
+  background: radial-gradient(circle closest-side at 18.5px 18.5px, white 80%, rgba(255, 0, 0, 0)); }
 
 .application-item__bottom {
   width: 270px;
@@ -10645,6 +10659,8 @@ ol {
 
 .link-group {
   margin-top: 31px; }
+  .link-group a:hover {
+    text-decoration: underline; }
   .link-group__main-link {
     font-size: 1rem;
     font-weight: 700; }
